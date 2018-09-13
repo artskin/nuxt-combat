@@ -10,16 +10,36 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "test": "mocha",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "axios": "^0.18.0",
+    "element-ui": "^2.4.6",
+    "iview": "^2.14.3",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.5",
+    "muse-ui": "^3.0.0-rc.3",
+    "nuxt": "^1.4.2"
   },
   "devDependencies": {
+    "assert": "^1.4.1",
     "babel-eslint": "^8.2.1",
+    "babel-preset-vue": "^2.0.2",
+    "babel-preset-vue-app": "^2.0.0",
+    "chai": "^4.1.2",
+    "cheerio": "^1.0.0-rc.2",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "istanbul": "^0.4.5",
+    "koa": "^2.5.1",
+    "koa-static": "^5.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "unit.js": "^2.0.0"
   }
 }

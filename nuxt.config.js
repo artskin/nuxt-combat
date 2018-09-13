@@ -3,7 +3,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'fd-nuxt',
+    website: '智人admin-UI',
+    title: '智人',
+    titleTemplate: '%s - 数据管理后台',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -20,10 +22,25 @@ module.exports = {
   /*
   ** Build configuration
   */
+  css:[
+    // { src: 'muse-ui/dist/muse-ui.css'}
+    { src: 'element-ui/lib/theme-chalk/index.css'}
+  ],
+  plugins: [
+    //{ src: '~plugins/iview.js', ssr: false },
+    { src: '~plugins/element-ui.js', ssr: true }
+  ],
+
+  /*
+  ** Build configuration
+  */
   build: {
     /*
     ** Run ESLint on save
     */
+    extractCSS:{
+      allChunks: true
+    },
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
