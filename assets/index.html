@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <meta name="renderer" content="webkit">
+  <title>Api 测试</title>
+  <meta name="description" content="首页描述"/>
+  <meta name="keywords" content="首页关键词"/>
+  <meta name="author" content="Web Layout:amu"/>
+  <link rel="stylesheet" href="style/case.css">
+</head>
+<body>
+<h3>1.ajax</h3>
+<pre><button class="run">run</button><code class="javascript" contenteditable="true">
+    //访问我们创建的端口
+    axios.get('http://localhost:3002/api/index.json',{
+        dataType: 'json',
+        contentType:"application/json", 
+        crossDomain: true,
+    })
+    .then(function(response){
+        var data = '['+response.data+']';
+        data= JSON.parse(data);
+        
+        for(let i=0;i < data.length;i++){
+            console.log(data[i].chapterTitle);
+        }
+
+    })
+    .catch(function(err){
+        //console.log(err);
+    });
+</code></pre>
+<h3>2.set num</h3>
+<pre><button class="run">run</button><code class="javascript" contenteditable="true">
+    function fn(n){
+        var arr = [];
+        for(let i=0;i < n;i++){
+            var num = 2+Math.random()*32;
+            arr.push(num);
+        }
+        console.log(arr)
+        return arr;
+    }
+    fn('2');
+</code></pre>
+<h3>2.set num</h3>
+<pre><button class="run">run</button><code class="javascript" contenteditable="true">
+    /**
+    * 获取指定个数的随机数，范围[2,32]
+    * @param {number} n：需要的整数个数
+    * @return {array} 返回随机数数组，个数为n
+    */
+
+    function isPositiveInteger(s){//是否为正整数
+        var re = /^[0-9]+$/ ;
+        return re.test(s)
+    }
+    function rangeRandom(min,max){
+        return Math.floor(Math.random()*(max-min+1)+min);
+    }
+
+    function fn(n){
+        //变量声明
+        var min =2,
+            max=32;
+        
+        //参数校验
+        if(typeof n === 'number' && isPositiveInteger(n)){
+            var arr = [];
+            for(let i=0;i < n;i++){
+                var num = rangeRandom(2,32);
+                arr.push(num);
+            }
+            console.log(arr)
+            return arr;
+            
+        }else{
+            return []
+        }
+    }
+    fn(5);
+</code></pre>
+   
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+<script>
+  $(function(){
+    var data={
+      code:""
+    };
+
+    $('pre code').each(function(i, block) {
+      $(this).html("<ul><li>" + $(this).html().replace(/\n/g,"\n</li><li>") +"\n</li></ul>");
+      hljs.highlightBlock(block);
+    });
+
+    $(".run").click(function(){
+      //console.log($(this).next("code").text());
+      data.code = '"use strict";console.clear();'+$(this).next("code").text();
+      //console.log(data.code)
+      new Function(
+        data.code
+      )();
+    })
+  })
+</script>
+</body>
+</html>

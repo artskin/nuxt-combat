@@ -10,7 +10,7 @@
         <div class="round">
           <div class="round-inner"></div>
         </div>
-        <img src="~assets/images/head.png" alt="">
+        <img src="~assets/images/head.jpg" alt="">
       </div>
       
       <div class="login-box">
