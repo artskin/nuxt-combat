@@ -16,13 +16,15 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
+    "ajv": "^6.5.3",
     "axios": "^0.18.0",
     "element-ui": "^2.4.6",
     "iview": "^2.14.3",
     "koa-router": "^7.4.0",
     "koa2-cors": "^2.0.5",
     "muse-ui": "^3.0.0-rc.3",
-    "nuxt": "^1.4.2"
+    "nuxt": "^1.4.2",
+    "particles.js": "^2.0.0"
   },
   "devDependencies": {
     "assert": "^1.4.1",
@@ -40,6 +42,7 @@
     "koa-static": "^5.0.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
-    "unit.js": "^2.0.0"
+    "unit.js": "^2.0.0",
+    "vue-particles": "^1.0.9"
   }
 }

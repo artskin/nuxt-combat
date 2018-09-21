@@ -4,7 +4,7 @@ module.exports = {
   */
   head: {
     website: '智人admin-UI',
-    title: '智人',
+    title: '智慧数据',
     titleTemplate: '%s - 数据管理后台',
     meta: [
       { charset: 'utf-8' },
@@ -27,8 +27,8 @@ module.exports = {
     { src: 'element-ui/lib/theme-chalk/index.css'}
   ],
   plugins: [
-    //{ src: '~plugins/iview.js', ssr: false },
-    { src: '~plugins/element-ui.js', ssr: true }
+    { src: '~plugins/element-ui.js', ssr: true },
+    { src: '~plugins/VueParticles.js', ssr: false },
   ],
 
   /*

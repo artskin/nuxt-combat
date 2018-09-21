@@ -14,7 +14,9 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  
 }
+html,body{overflow: hidden;}
 
 *, *:before, *:after {
   box-sizing: border-box;
