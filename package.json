@@ -22,9 +22,11 @@
     "iview": "^2.14.3",
     "koa-router": "^7.4.0",
     "koa2-cors": "^2.0.5",
+    "maptalks": "^0.41.1",
     "muse-ui": "^3.0.0-rc.3",
     "nuxt": "^1.4.2",
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "vue-prism": "^1.0.5"
   },
   "devDependencies": {
     "assert": "^1.4.1",

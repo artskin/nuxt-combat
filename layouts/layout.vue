@@ -117,8 +117,8 @@ body{padding:0;margin:0}
 .icon-LogoWhalel:before { content: "\e602"; }
 
 .layout{
-    max-width: 1000px;
-    margin: 0 auto;
+    /* max-width: 1000px;
+    margin: 0 auto; */
 }
 .layout-logo{
     width: 100px;

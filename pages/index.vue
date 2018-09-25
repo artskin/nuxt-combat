@@ -22,7 +22,7 @@
               <el-input v-model="form.pwd"></el-input>
             </el-form-item>
             <div class="links">
-              <a href="/ucenter/" class="button--green">登录</a>
+              <a href="/map" class="button--green">登录</a>
             </div>
             <!-- <el-form-item label="记住密码？">
               <el-switch v-model="form.delivery"></el-switch>
@@ -36,8 +36,11 @@
         </div>
           
       </div>
-      
-    <vue-particles color="#6699ff"></vue-particles>
+    <no-ssr>
+      <!-- this component will only be rendered on client-side -->
+      <vue-particles color="#6699ff"></vue-particles>
+    </no-ssr>
+    
   </div>
 </template>
 
