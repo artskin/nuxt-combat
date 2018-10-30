@@ -1,6 +1,6 @@
 <style>
 
-#map{width: 800px;height: 600px;}
+#map{width: 800px;height: 600px;border: 2px dashed #ccc;}
 </style>
 
 <template>
@@ -58,6 +58,11 @@ export default {
     drawTool.on('drawend', function (param) {
       console.log(param.geometry);
       layer.addGeometry(param.geometry);
+      drawTool.disable();
+    });
+
+    map.config({
+      'doubleClickZoom' : true
     });
 
     var items = ['Point', 'LineString', 'Polygon', 'Ellipse', 'Rectangle'].map(function (value) {

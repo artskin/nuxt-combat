@@ -29,6 +29,7 @@ module.exports = {
   plugins: [
     { src: '~plugins/element-ui.js', ssr: true },
     { src: '~plugins/VueParticles.js', ssr: false },
+    { src: '~plugins/VueLeaflet.js', ssr: false },
   ],
 
   /*

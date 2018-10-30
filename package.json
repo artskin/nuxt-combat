@@ -26,7 +26,9 @@
     "muse-ui": "^3.0.0-rc.3",
     "nuxt": "^1.4.2",
     "particles.js": "^2.0.0",
-    "vue-prism": "^1.0.5"
+    "vue-prism": "^1.0.5",
+    "vue2-leaflet": "^1.1.1",
+    "vueleaflet": "^2.1.1"
   },
   "devDependencies": {
     "assert": "^1.4.1",
